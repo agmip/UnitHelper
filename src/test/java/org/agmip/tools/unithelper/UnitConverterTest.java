@@ -19,7 +19,7 @@ import ucar.units.UnitSystemException;
 public class UnitConverterTest {
 
     private static final String[] BASE = {
-        "number", "counts", "unitless", "fraction", "code", "ratio",
+        "number", "counts", "unitless", "fraction", "code", "ratio", "text",
         "year", "month", "mo", "day", "h", "hr", "hour", "d", "min",
         "degF", "degC",
         "km", "m", "cm", "mm",
@@ -96,7 +96,7 @@ public class UnitConverterTest {
         Assert.assertEquals("mm/d", "1.1574074074074074E-8 m.s-1", UnitConverter.getDescp("mm/d"));
         Assert.assertEquals("kPa", "1000.0 Pa", UnitConverter.getDescp("kPa"));
         Assert.assertEquals("dap", "86400.0 s", UnitConverter.getDescp("dap"));
-//        Assert.assertEquals("code", "0.01 ode", UnitConverter.getDescp("code"));
+        Assert.assertEquals("code", "", UnitConverter.getDescp("code"));
         Assert.assertEquals("g/eye", "0.001 kg", UnitConverter.getDescp("g/eye")); //TODO
         Assert.assertEquals("g/m2", "0.001 kg.m-2", UnitConverter.getDescp("g/m2"));
         Assert.assertEquals("g/plant", "0.001 kg", UnitConverter.getDescp("g/[plant]"));
@@ -152,6 +152,8 @@ public class UnitConverterTest {
 //        Assert.assertEquals("number/m2/d", "8.64E-14 ber.m-2.s", UnitConverter.getDescp("number/m2/d"));
         Assert.assertEquals("%", "0.01", UnitConverter.getDescp("%"));
         
+        Assert.assertEquals("n", "", UnitConverter.getDescp("n"));
+        Assert.assertEquals("nu", "", UnitConverter.getDescp("nu"));
     }
     
 //    @Test

@@ -192,4 +192,23 @@ public class UnitConverterTest {
     public void testCategory() {
         Assert.assertEquals("Plane Angle", UnitConverter.getCategory("deg"));
     }
+    
+    @Test
+    public void testKPHandling() {
+        Assert.assertEquals("K2O", "0.8264462809917356 kg", UnitConverter.getDescp("K2Okg"));
+        Assert.assertEquals("K2o", "0.8264462809917356 kg", UnitConverter.getDescp("K2okg"));
+        Assert.assertEquals("k2o", "0.8264462809917356 kg", UnitConverter.getDescp("k2okg"));
+        Assert.assertEquals("k2O", "0.8264462809917356 kg", UnitConverter.getDescp("k2Okg"));
+        Assert.assertEquals("k2Om", "0.8264462809917356 m", UnitConverter.getDescp("k2Om"));
+        Assert.assertEquals("P2O5", "0.4366812227074236 kg", UnitConverter.getDescp("P2O5kg"));
+        Assert.assertEquals("P2o5", "0.4366812227074236 kg", UnitConverter.getDescp("P2o5kg"));
+        Assert.assertEquals("p2O5", "0.4366812227074236 kg", UnitConverter.getDescp("p2O5kg"));
+        Assert.assertEquals("p2o5", "0.4366812227074236 kg", UnitConverter.getDescp("p2o5kg"));
+        Assert.assertEquals("P2O", "0.4366812227074236 kg", UnitConverter.getDescp("P2Okg"));
+        Assert.assertEquals("P2o", "0.4366812227074236 kg", UnitConverter.getDescp("P2okg"));
+        Assert.assertEquals("p2O", "0.4366812227074236 kg", UnitConverter.getDescp("p2Okg"));
+        Assert.assertEquals("p2o", "0.4366812227074236 kg", UnitConverter.getDescp("p2okg"));
+        Assert.assertEquals("p2o5m", "0.4366812227074236 m", UnitConverter.getDescp("p2o5m"));
+        Assert.assertEquals("p2om", "0.4366812227074236 m", UnitConverter.getDescp("p2om"));
+    }
 }

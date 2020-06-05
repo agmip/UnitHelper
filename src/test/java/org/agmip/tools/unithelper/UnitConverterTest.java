@@ -211,4 +211,16 @@ public class UnitConverterTest {
         Assert.assertEquals("p2o5m", "0.4366812227074236 m", UnitConverter.getDescp("p2o5m"));
         Assert.assertEquals("p2om", "0.4366812227074236 m", UnitConverter.getDescp("p2om"));
     }
+    
+    @Test
+    public void testAutoScale() throws SpecificationException, UnitParseException, NoSuchUnitException, UnitDBException, PrefixDBException, UnitSystemException, ConversionException {
+        Assert.assertEquals("25.4", UnitConverter.convert("inch", "mm", "1").toPlainString());
+        Assert.assertEquals("0.025", UnitConverter.convert("inch", "m", "1").toPlainString());
+        Assert.assertEquals("0.25", UnitConverter.convert("inch", "dm", "1").toPlainString());
+        Assert.assertEquals("2.5", UnitConverter.convert("inch", "cm", "1").toPlainString());
+        Assert.assertEquals("10", UnitConverter.convert("m", "mm", "0.01").toPlainString());
+        Assert.assertEquals("1000", UnitConverter.convert("m", "mm", "1").toPlainString());
+        Assert.assertEquals("0.001", UnitConverter.convert("mm", "m", "1").toPlainString());
+        Assert.assertEquals("0.00001", UnitConverter.convert("mm", "m", "0.01").toPlainString());
+    }
 }

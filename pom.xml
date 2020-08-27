@@ -39,7 +39,7 @@
 
 	<scm>
 		<connection>scm:git:git://github.com/agmip/UnitHelper.git</connection>
-		<developerConnection>scm:git:ssh://github.com:agmip/UnitHelper.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:agmip/UnitHelper.git</developerConnection>
 		<url>http://github.com/agmip/UnitHelper/tree/master</url>
 	</scm>
 

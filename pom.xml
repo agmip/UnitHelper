@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.agmip.libs</groupId>
 	<artifactId>unit-helper</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Unit Helper Library</name>
@@ -41,7 +41,8 @@
 		<connection>scm:git:git://github.com/agmip/UnitHelper.git</connection>
 		<developerConnection>scm:git:git@github.com:agmip/UnitHelper.git</developerConnection>
 		<url>http://github.com/agmip/UnitHelper/tree/master</url>
-	</scm>
+	  <tag>HEAD</tag>
+  </scm>
 
 	<distributionManagement>
 		<snapshotRepository>

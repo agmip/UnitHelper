@@ -41,8 +41,7 @@
 		<connection>scm:git:git://github.com/agmip/UnitHelper.git</connection>
 		<developerConnection>scm:git:git@github.com:agmip/UnitHelper.git</developerConnection>
 		<url>http://github.com/agmip/UnitHelper/tree/master</url>
-	  <tag>HEAD</tag>
-  </scm>
+	</scm>
 
 	<distributionManagement>
 		<snapshotRepository>
@@ -75,6 +74,9 @@
 	</dependencies>
 	<repositories>
 		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 			<id>central</id>
 			<name>Central Repository</name>
 			<url>https://repo.maven.apache.org/maven2</url>
